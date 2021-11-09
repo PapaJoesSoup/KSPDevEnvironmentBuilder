@@ -1,1 +1,3 @@
 D:\SteamLibrary\steamapps\common\Kerbal Space Program
+
+rem  Only the first line of this file is read by the script.  This is the Location of the retail copy of KSP.  This folder will be copied to the locatin specified in the KSP_DIR.txt (Dev game folder) after a backup of the Dev game Folder is created and the Dev game Folder is wiped wiped. 
