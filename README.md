@@ -1,4 +1,5 @@
-# KSPDevEnvironment
+# KSPDevEnvironmentBuilder
+
 Script to clone an install of KSP to a new location and automate the creation of a linked  Unity Dev Environment.  Allows Mod development using a centralized reference library, to support multiple mods.
 
 Windows version, runs in a Dos window (batch file)
