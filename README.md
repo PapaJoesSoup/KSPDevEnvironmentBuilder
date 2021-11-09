@@ -9,9 +9,36 @@ Uses text files for locating certain assets, so can be customized for individual
 
 The basic structure is as follows:
 
-1 DevSetup folder contains the necessary files for identifying the location of the mod development source code.  The location of this file is not critical. Typically I place it in my Game folder.  
+1.  DevSetup folder contains the necessary files for identifying the location of the mod development source code.  The location of this file is not critical. Typically I place it in my Game folder.  
 
 2.  _LocalDev Folder contains the necessry linking files to locate the various resources needed for cloning the game, libraries needed for development, and distribution.  This folder typically located the folder that contains the mod project/solution folders.  This makes adding references and creating distribution files for multiple mods easier.
 
 
 Each folder contains a Readme.txt so you will know what is generally contained in them.
+
+THe process runs as follows:
+
+1.  at start, check the version in the Readme.txt file of the installed game against any existing version in the active dev game folder
+2.  Display version data and prompt the user to continue or quit.
+3.  Display the action menu for the script:
+  
+   Main Menu:
+
+  1 - Perform all steps...
+  2 - Backup existing game folder...
+  3 - Remove existing game folder...
+  4 - Create new game folder...
+  5 - Copy Steam game folder...
+  6 - Copy new KSP assemblies to Dev...
+  7 - Copy Dev Debug files to Game folder...
+  8 - Copy Game Save and Ships to Game folder...
+  9 - Create linked folder...
+  X - Quit script  (Do nothing!)
+ ====================================================
+
+---> Select option (1 - 9, X): 
+
+4.  if all is selected the actions will be performed in the order shown above. if any single option is selected then only that action will occur.
+5.  If all is selected, the batch process contains pauses built into each step so you can see what is happening between steps. 
+
+after any option selected is completed, the script will prompt you to press a key to exit.
