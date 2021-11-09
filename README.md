@@ -35,8 +35,7 @@ THe process runs as follows:
   8 - Copy Game Save and Ships to Game folder...
   9 - Create linked folder...
   X - Quit script  (Do nothing!)
- ====================================================
-
+  
 ---> Select option (1 - 9, X): 
 
 4.  if all is selected the actions will be performed in the order shown above. if any single option is selected then only that action will occur.
