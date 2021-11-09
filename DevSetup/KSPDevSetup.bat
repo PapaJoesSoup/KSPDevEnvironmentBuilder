@@ -156,7 +156,7 @@ xcopy /E /Y /D "%KSP_DIR%_%VERSION%_old\ships\*.*" "%KSP_DIR%\Ships\"
 xcopy /E /Y /D "%KSP_DIR%_%VERSION%_old\saves\*.*" "%KSP_DIR%\saves\"
 @echo     - Copy complete...
 @echo: 
-if not "%optn%" == "1" ( goto end )
+if not "%optn%" == "1" ( goto menu )
 
 :createLinkedFolder
 @echo     - Ready to create the linked folder for debugging...
