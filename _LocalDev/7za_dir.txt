@@ -1,1 +1,3 @@
 D:\Games\Tools\7zip
+
+rem  Only the first line of this file is read by the script.  This is the location of the 7Zip command line files.  These are used to create distribution files for your mods.
