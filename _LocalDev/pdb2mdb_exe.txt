@@ -1,3 +1,5 @@
 C:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\4.5\pdb2mdb.exe
 
-rem  Only the first line of this file is read by the script.  This is the location of the Mono debug converter file.  while this has been deprecated if you properly set up your project, it can still be used.   See this post:  https://forum.kerbalspaceprogram.com/index.php?/topic/102909-ksp-plugin-debugging-and-profiling-for-visual-studio-and-monodevelop-on-all-os/&do=findComment&comment=3698370 
+rem  Only the first line of this file is read by the script.  This is the location of the Mono debug converter file.  
+rem while this has been deprecated if you properly set up your project, it can still be used.   
+rem See this post:  https://forum.kerbalspaceprogram.com/index.php?/topic/102909-ksp-plugin-debugging-and-profiling-for-visual-studio-and-monodevelop-on-all-os/&do=findComment&comment=3698370 
