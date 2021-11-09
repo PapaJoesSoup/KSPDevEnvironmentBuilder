@@ -1,1 +1,3 @@
 C:\Games\KSP\Kerbal Space Program
+
+rem  Only the first line of this file is read by the script.  This is the Location of the Development copy of KSP.  This folder will be backed up with the version number attached and then wiped and recreated when the devSetup script action is run.  
