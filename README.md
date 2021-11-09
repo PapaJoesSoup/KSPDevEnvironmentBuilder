@@ -38,7 +38,8 @@ THe process runs as follows:
   
 ---> Select option (1 - 9, X): 
 
-4.  if all is selected the actions will be performed in the order shown above. if any single option is selected then only that action will occur.
-5.  If all is selected, the batch process contains pauses built into each step so you can see what is happening between steps. 
+If all actions are selected (menu option 1) the actions will be performed in the order shown above. if any single option is selected then only that action will occur.
+If all is selected, the batch process contains pauses built into each step so you can see what is happening between steps. 
 
-If all actions are selected (menu option 1), after completion, the script will prompt you to press a key to exit.  If any option other than all is selected, you will return to the main menu after the action is completed.
+If all is selected, after completion, the script will prompt you to press a key to exit.  
+If any option other than all is selected, you will return to the main menu after that action is completed.
