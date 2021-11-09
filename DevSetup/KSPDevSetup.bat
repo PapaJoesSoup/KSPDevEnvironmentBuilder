@@ -90,7 +90,7 @@ xcopy /E /Y /Q "%KSP_DIR%\*.*" "%KSP_DIR%_%VERSION%_old\"
 @echo     - Backup complete...
 @echo: 
 
-if not "%optn%" == "1" ( goto end )
+if not "%optn%" == "1" ( goto menu )
 
 :removeGame
 @echo     - Removing existing game folder...
@@ -98,7 +98,7 @@ pause
 rmdir /s /q "%KSP_DIR%"
 @echo     - Removal complete...
 @echo: 
-if not "%optn%" == "1" ( goto end )
+if not "%optn%" == "1" ( goto menu )
 
 :createFolder
 @echo     - Creating new game folder...
@@ -110,7 +110,7 @@ if not exist "%KSP_DIR%" (
 	@echo     - Game folder exists.  Skipping...
 )
 @echo:
-if not "%optn%" == "1" ( goto end )
+if not "%optn%" == "1" ( goto menu )
 
 :copyGame
 @echo     - Ready to Copy Steam Game to local Game folder...
@@ -120,7 +120,7 @@ pause
 xcopy /E /Y "%STEAM_DIR%\*.*" "%KSP_DIR%\"
 @echo     - Copy complete...
 @echo:
-if not "%optn%" == "1" ( goto end )
+if not "%optn%" == "1" ( goto menu )
 
 :copyAssemblies
 @echo     - Ready to Copy KSP and unity assemblies 
@@ -134,7 +134,7 @@ xcopy /E /Y "%KSP_DIR%\KSP_x64_Data\Managed\Unity*.dll" "%GIT_DIR%\_LocalDev\KSP
 xcopy /Y "%KSP_DIR%\readme.txt" "%GIT_DIR%\_LocalDev\KSPRefs\"
 @echo     - Copy complete...
 @echo:
-if not "%optn%" == "1" ( goto end )
+if not "%optn%" == "1" ( goto menu )
 
 :copyDebugFiles
 @echo     - Ready to Copy unity debug files to game folder and set debug mode...
@@ -146,7 +146,7 @@ copy /Y "%LCL_DIR%\UnityPlayer.dll" "%KSP_DIR%"
 copy /Y "%LCL_DIR%\WinPixEventRuntime.dll" "%KSP_DIR%"
 @echo     - Copy complete...
 @echo: 
-if not "%optn%" == "1" ( goto end )
+if not "%optn%" == "1" ( goto menu )
 
 :copyGameSaves
 @echo     - Ready to Copy ships, Saves and mods to the new game folder.
