@@ -1,1 +1,3 @@
 C:\source\KSP\Mods\Source
+
+rem  Only the first line of this file is read by the script.  This is the location of the _LocalDe folder.  This location is typically the parent folder of your mod(s) source code or solution folders.
