@@ -10,4 +10,5 @@ Unity runtime files (from the version of Unity currently supported by this versi
     WindowsPlayer.exe
     WinPixEventRuntime.dll
 
-NOTE:  the Unity files will need to be manually added to this folder, and updated as the unity version is updated for the game.  As of KSP version 1.12.x, Unity version is 2019.4.18f1
+NOTE:  The Unity runtime files will need to be manually added to this folder, and updated as the unity version is updated for the game.  
+       As of KSP version 1.12.x, Unity version is 2019.4.18f1
