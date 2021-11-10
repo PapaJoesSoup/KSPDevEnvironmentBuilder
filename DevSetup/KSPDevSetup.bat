@@ -10,9 +10,9 @@ set LCL_DIR=%~dp0
 set VERSION=""
 set space = " "
 
-set /p GIT_DIR=<"%LCL_DIR%\git_dir.txt"
-set /p STEAM_DIR=<"%GIT_DIR%\_LocalDev\steam_dir.txt"
-set /p KSP_DIR=<"%GIT_DIR%\_LocalDev\ksp_dir.txt"
+set /p DEV_DIR=<"%LCL_DIR%\dev_dir.txt"
+set /p RETAIL_DIR=<"%DEV_DIR%\_LocalDev\retail_dir.txt"
+set /p KSP_DIR=<"%DEV_DIR%\_LocalDev\ksp_dir.txt"
 
 @echo: 
 @echo     Path tokens:
