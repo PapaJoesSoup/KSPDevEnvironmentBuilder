@@ -1,7 +1,9 @@
 @echo off
 rem  This file sets up a fresh Development mode install of KSP from a Steam installation
 rem  Change Log:
+rem  v1.1  update to support distribution via Github, changing file names
 rem  v1.0  add support for unity 2019.
+
 cd %~dp0
 set LCL_DIR=%~dp0
 
@@ -15,25 +17,25 @@ set /p KSP_DIR=<"%GIT_DIR%\_LocalDev\ksp_dir.txt"
 @echo: 
 @echo     Path tokens:
 @echo     - LCL_DIR: %LCL_DIR%
-@echo     - STEAM_DIR: %STEAM_DIR%    
-@echo     - GIT_DIR: %GIT_DIR%
+@echo     - RETAIL_DIR: %RETAIL_DIR%    
+@echo     - DEV_DIR: %DEV_DIR%
 @echo     - KSP_DIR: %KSP_DIR%
 @echo:
 @echo   Let's get the version of the existing game...
 
 rem get_versions
-set steamVer = ""
-for /F "usebackq skip=13 delims=" %%V in ("%STEAM_DIR%\readme.txt") do set "steamVer=%%V" & goto Steamvalue
+set retailVer = ""
+for /F "usebackq skip=13 delims=" %%V in ("%RETAIL_DIR%\readme.txt") do set "steamVer=%%V" & goto Retailvalue
 
-:Steamvalue
-set thisVer = ""
-for /F "usebackq skip=13 delims=" %%V in ("%KSP_DIR%\readme.txt") do set "thisVer=%%V" & goto Hasvalue
+:Retailvalue
+set devVer = ""
+for /F "usebackq skip=13 delims=" %%V in ("%KSP_DIR%\readme.txt") do set "devVer=%%V" & goto Hasvalue
 
 :Hasvalue
-call set VERSION=%%thisVer:Version =%word%%%
+call set VERSION=%%devVer:Version =%word%%%
 
-@echo     - Steam Version found is:  %steamVer%
-@echo     - Dev Version found is: %thisVer%
+@echo     - Retial Version found is:  %retailVer%
+@echo     - Dev Version found is: %devVer%
 set /p quit= "  - Do you wish to continue? (Y/N):  "
 if /i "%quit%" == "N" ( 
 	@echo     - Terminating batch operation without executing Dev Setup...
@@ -113,11 +115,11 @@ if not exist "%KSP_DIR%" (
 if not "%optn%" == "1" ( goto menu )
 
 :copyGame
-@echo     - Ready to Copy Steam Game to local Game folder...
-@echo       from: "%STEAM_DIR%" 
+@echo     - Ready to Copy Retail Game to Dev Game folder...
+@echo       from: "%RETAIL_DIR%" 
 @echo         to: "%KSP_DIR%"
 pause
-xcopy /E /Y "%STEAM_DIR%\*.*" "%KSP_DIR%\"
+xcopy /E /Y "%RETAIL_DIR%\*.*" "%KSP_DIR%\"
 @echo     - Copy complete...
 @echo:
 if not "%optn%" == "1" ( goto menu )
@@ -125,13 +127,13 @@ if not "%optn%" == "1" ( goto menu )
 :copyAssemblies
 @echo     - Ready to Copy KSP and unity assemblies 
 @echo       from: "%KSP_DIR%\KSP_x64_Data\Managed" 
-@echo         to: "%GIT_DIR%\_LocalDev\KSPRefs\" folder...
+@echo         to: "%DEV_DIR%\_LocalDev\KSPRefs\" folder...
 pause
-xcopy /E /Y "%KSP_DIR%\KSP_x64_Data\Managed\Assembly-CSharp.dll" "%GIT_DIR%\_LocalDev\KSPRefs\"
-xcopy /E /Y "%KSP_DIR%\KSP_x64_Data\Managed\Assembly-CSharp-firstpass.dll" "%GIT_DIR%\_LocalDev\KSPRefs\"
-xcopy /E /Y "%KSP_DIR%\KSP_x64_Data\Managed\KSPAssets.dll" "%GIT_DIR%\_LocalDev\KSPRefs\"
-xcopy /E /Y "%KSP_DIR%\KSP_x64_Data\Managed\Unity*.dll" "%GIT_DIR%\_LocalDev\KSPRefs\"
-xcopy /Y "%KSP_DIR%\readme.txt" "%GIT_DIR%\_LocalDev\KSPRefs\"
+xcopy /E /Y "%KSP_DIR%\KSP_x64_Data\Managed\Assembly-CSharp.dll" "%DEV_DIR%\_LocalDev\KSPRefs\"
+xcopy /E /Y "%KSP_DIR%\KSP_x64_Data\Managed\Assembly-CSharp-firstpass.dll" "%DEV_DIR%\_LocalDev\KSPRefs\"
+xcopy /E /Y "%KSP_DIR%\KSP_x64_Data\Managed\KSPAssets.dll" "%DEV_DIR%\_LocalDev\KSPRefs\"
+xcopy /E /Y "%KSP_DIR%\KSP_x64_Data\Managed\Unity*.dll" "%DEV_DIR%\_LocalDev\KSPRefs\"
+xcopy /Y "%KSP_DIR%\readme.txt" "%DEV_DIR%\_LocalDev\KSPRefs\"
 @echo     - Copy complete...
 @echo:
 if not "%optn%" == "1" ( goto menu )
