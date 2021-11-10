@@ -12,3 +12,6 @@ Unity runtime files (from the version of Unity currently supported by this versi
 
 NOTE:  The Unity runtime files will need to be manually added to this folder, and updated as the unity version is updated for the game.  
        As of KSP version 1.12.x, Unity version is 2019.4.18f1
+       Relative Path to files is:
+       [UnityVersion]\Editor\Data\PlaybackEngines\windowsstandalonesupport\Variations\win64_development_mono
+
