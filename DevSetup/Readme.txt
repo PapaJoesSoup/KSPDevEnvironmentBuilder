@@ -1,5 +1,5 @@
 This folder should contain:
-git_dir.txt
+dev_dir.txt
 KSPDevSetup.bat
 PlayerconnectionConfigFile (From the KSP forums: https://forum.kerbalspaceprogram.com/index.php?/topic/102909-ksp-plugin-debugging-and-profiling-for-visual-studio-and-monodevelop-on-all-os/&do=findComment&comment=3628143
 
