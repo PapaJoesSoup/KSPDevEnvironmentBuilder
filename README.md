@@ -17,9 +17,9 @@ The basic structure is as follows:
 
 Each folder contains a Readme.txt so you will know what is generally contained in them.
 
-THe process runs as follows:
+The process runs as follows:
 
-1.  at start, check the version in the Readme.txt file of the installed game against any existing version in the active dev game folder
+1.  At start, check the version in the Readme.txt file of the installed game against any existing version in the active dev game folder
 2.  Display version data and prompt the user to continue or quit.
 3.  Display the action menu for the script:
   
