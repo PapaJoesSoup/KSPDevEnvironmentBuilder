@@ -5,7 +5,7 @@ dist_dir.txt
 ksp_dir.txt
 mono_exe.txt
 pdb2mdb_exe.txt
-steam_dir.txt
+retail_dir.txt
 KSPRefs (Folder) which should contain: 
     KSP Assembly files (from GameData\Managed)
     Unity libraries files (from GameData\Managed).
