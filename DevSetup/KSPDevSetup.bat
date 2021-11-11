@@ -25,7 +25,7 @@ set /p KSP_DIR=<"%DEV_DIR%\_LocalDev\ksp_dir.txt"
 
 rem get_versions
 set retailVer = ""
-for /F "usebackq skip=13 delims=" %%V in ("%RETAIL_DIR%\readme.txt") do set "steamVer=%%V" & goto Retailvalue
+for /F "usebackq skip=13 delims=" %%V in ("%RETAIL_DIR%\readme.txt") do set "retailVer=%%V" & goto Retailvalue
 
 :Retailvalue
 set devVer = ""
